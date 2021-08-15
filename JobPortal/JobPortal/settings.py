@@ -37,8 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'Jobseeker'
+    'Jobseeker',
+    'Employer',
 ]
+AUTH_USER_MODEL = 'Employer.MyUser'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
