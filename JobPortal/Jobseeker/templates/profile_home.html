@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+{%extends 'mainbase.html'%}
+{%block body_block%}
+
+<div class="container-fluid" xmlns="http://www.w3.org/1999/html" >
+    <h1 align="center">WELCOME TO JOBPORTAL</h1>
+
+    <div class="row">
+        {%if home.is_login%}
+
+    <div class="col-6" id=divprofile">
+        <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">View your Profile </h5>
+                    <a href="{%url 'jobseekerdetails' %}" class="btn btn-primary">Profile</a>
+                </div>
+             </div>
+    </div>
+
+{%else%}
+
+    <div class="col-6" id="divfill">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">New to JobPortal?? Tell Me About Yourself</h5>
+                <a href="{% url 'profilecreate' %}" class="btn btn-primary">Fillup</a>
+            </div>
+        </div>
+    </div>
+    {%endif%}
+<!--    <div class="col-2"></div>-->
+</div>
+</div>
+
+{%endblock%}

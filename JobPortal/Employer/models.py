@@ -47,6 +47,7 @@ class MyUser(AbstractBaseUser):
     role=models.CharField(max_length=25,choices=options,default="centerhead")
     is_active = models.BooleanField(default=True)
     is_admin = models.BooleanField(default=False)
+    is_login=models.IntegerField(null=True,default=None)
     objects = MyUserManager()
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['role','username']

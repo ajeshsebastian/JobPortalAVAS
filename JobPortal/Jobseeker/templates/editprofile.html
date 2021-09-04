@@ -1,0 +1,19 @@
+
+<!DOCTYPE html>
+{%extends 'mainbase.html'%}
+{%block body_block%}
+
+<div class="row mt-1 ">
+    <div class="col-4"></div>
+    <div class="col-4">
+        <form action="" method="post">
+            {%csrf_token%}
+            {{form.as_p}}
+            <button type="submit" class="btn btn-success">Update</button>
+        </form>
+    </div>
+    <div class="col-4"></div>
+</div>
+
+{%endblock%}
+

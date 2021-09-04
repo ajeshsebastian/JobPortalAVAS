@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+{%extends 'mainbase.html'%}
+{%block body_block%}
+
+<div class="row mt-1 ">
+    <div class="col-4"></div>
+    <div class="col-6"></div>
+    <div class="col-2">
+        <h5><a href="{%url 'editprofile' profile.id%}" class="btn btn-primary">Edit</a></h5>
+    </div>
+    <div class="col-8 ml-3" >
+        <div class="card">
+                <div class="card-body">
+                    <h2>Personal Details</h2>
+                    <br>
+                    <br>
+
+                    <div class="row">
+                        <div class="col-3">
+                            <h5 class="card-title">Name</h5>
+                        </div>
+                        <div class="col-1">
+                            <h5 class="card-title">:</h5>
+                        </div>
+
+                        <div class="col-8">
+                            <h5 class="card-title">{{profile.name}}</h5>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-3">
+                            <h5 class="card-title">Age</h5>
+                        </div>
+                        <div class="col-1">
+                            <h5 class="card-title">:</h5>
+                        </div>
+
+                        <div class="col-8">
+                            <h5 class="card-title">{{profile.age}}</h5>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-3">
+                            <h5 class="card-title">Email</h5>
+                        </div>
+                        <div class="col-1">
+                            <h5 class="card-title">:</h5>
+                        </div>
+
+                        <div class="col-8">
+                            <h5 class="card-title">{{profile.email}}</h5>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-3">
+                            <h5 class="card-title">Address</h5>
+                        </div>
+                        <div class="col-1">
+                            <h5 class="card-title">:</h5>
+                        </div>
+
+                        <div class="col-8">
+                            <h5 class="card-title">{{profile.address}}</h5>
+                        </div>
+                    </div>
+
+                </div>
+        </div>
+
+        <div class="card">
+            <div class="card-body">
+                <h2>Educational Details</h2>
+                <br>
+                <br>
+
+                <div class="row">
+                    <div class="col-3">
+                        <h5 class="card-title">Graduation</h5>
+                    </div>
+                    <div class="col-1">
+                        <h5 class="card-title">:</h5>
+                    </div>
+
+                    <div class="col-8">
+                        <h5 class="card-title">{{profile.graduation}}</h5>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-3">
+                        <h5 class="card-title">Post Graduation</h5>
+                    </div>
+                    <div class="col-1">
+                        <h5 class="card-title">:</h5>
+                    </div>
+
+                    <div class="col-8">
+                        <h5 class="card-title">{{profile.post_graduation}}</h5>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-3">
+                        <h5 class="card-title">Certifications</h5>
+                    </div>
+                    <div class="col-1">
+                        <h5 class="card-title">:</h5>
+                    </div>
+
+                    <div class="col-8">
+                        <h5 class="card-title">{{profile.certifications}}</h5>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+        <div class="card">
+            <div class="card-body">
+                <h2>Employment</h2>
+                <br>
+                <br>
+
+                <div class="row">
+                    <div class="col-3">
+                        <h5 class="card-title">Experience</h5>
+                    </div>
+                    <div class="col-1">
+                        <h5 class="card-title">:</h5>
+                    </div>
+
+                    <div class="col-8">
+                        <h5 class="card-title">{{profile.experience}} Year</h5>
+                    </div>
+                </div>
+                <br>
+
+                <br>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-body">
+                <h2>Resume</h2>
+                <br>
+                <br>
+
+                <div class="row">
+                    <div class="col-4">
+                        <h5 class="card-title">Attached Resume</h5>
+                    </div>
+                    <div class="col-1">
+                        <h5 class="card-title">:</h5>
+                    </div>
+
+                    <div class="col-7">
+                        <h5 class="card-title"><h5><a href="{{profile.resume.url}}" download="{{profile.resume.url}}" >Download</a></h5></h5>
+                    </div>
+                </div>
+                <br>
+
+                <br>
+            </div>
+        </div>
+
+    </div>
+
+<!--        <div class="card-rows">-->
+<!--            <div class="card bg-light">-->
+<!--            <div class="card-body text-center">-->
+<!--                <div class="row">-->
+<!--                    <div class="col-4">-->
+<!--                        <h4>Name</h4></div>-->
+<!--                    <div class="col-2"></div>-->
+<!--                    <div class="col-6"><h5>{{profile.name}}</h5></div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            </div>-->
+    
+  </div>
+{%endblock%}
