@@ -75,7 +75,7 @@ class EmployerProfile(models.Model):
       overview=models.CharField(max_length=300)
       website=models.CharField(max_length=25)
       field=models.CharField(max_length=40)
-      company_size=models.IntegerField()
+      company_size=models.CharField(max_length=300)
       headquarters=models.CharField(max_length=60)
       industry_type=models.CharField(max_length=30)
       specialities=models.CharField(max_length=300)
@@ -93,4 +93,5 @@ class JobPost(models.Model):
       candidate_profile=models.CharField(max_length=100)
       employment_type=models.CharField(max_length=50)
       education=models.CharField(max_length=100)
+      myuser=models.CharField(max_length=100,null=True)
 

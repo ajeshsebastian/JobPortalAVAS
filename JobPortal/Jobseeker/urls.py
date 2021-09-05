@@ -5,7 +5,7 @@ from Employer import views
 
 urlpatterns=[
         path('accounts/register',jview.SeekerRegistrationView.as_view(),name="register"),
-        path('accounts/signin',jview.SignIn.as_view(),name="signin"),
+        path('',jview.SignIn.as_view(),name="signin"),
         path('accounts/signout', jview.signout, name="signout"),
         path("profile/home", jview.ProfileHomeView.as_view(), name="profilehome"),
         path("profile/create", jview.ProfileCreate.as_view(), name="profilecreate"),

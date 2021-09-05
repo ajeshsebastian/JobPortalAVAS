@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{%extends 'EmployerBaseHome.html'%}
+{%block body_block%}
+<div class="container">
+    <div class="row">
+        <div class="col-1"></div>
+        <div class="col-10">
+            <div class="row">
+                <div class="col-4"></div>
+                <div class="col-4">
+                    <h1>Job List</h1>
+                </div>
+                <div class="col-4"></div>
+            </div>
+
+            <table class="table">
+    <tr>
+        <th>Job Position</th>
+        <th>Min Experience</th>
+        <th>Max Experience</th>
+        <th>Vacancies</th>
+        <th>Action</th>
+    </tr>
+    <tr>
+        {%for job in jobs%}
+        <td>{{job.job_position}}</td>
+        <td>{{job.min_experience}}</td>
+        <td>{{job.max_experience}}</td>
+        <td>{{job.vacancies}}</td>
+        <td>
+            <a href="" class="btn btn-primary">Detail</a><a href="" class="btn btn-warning">Update</a><a href="" class="btn btn-danger">Delete</a>
+        </td>
+         {%endfor%}
+    </tr>
+</table>
+        </div>
+        <div class="col-1"></div>
+    </div>
+</div>
+{%endblock%}

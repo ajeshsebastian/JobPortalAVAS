@@ -2,8 +2,10 @@ from django.urls import path
 from django.shortcuts import render
 from Employer import views
 urlpatterns=[
-        path('accounts/register',views.registartion_view,name="register"),
-        path('accounts/signin',views.signin,name="signin"),
-        path('accounts/signout',views.Signout,name="signout"),
-        path('',lambda request:render(request,"home.html"),name="base")
+         path("home",views.EmployerHomeView.as_view(),name="Ehome"),
+         path("profile/create",views.EmployerCreateProfileView.as_view(),name="EProfileCreate"),
+         path("profile/view",views.EmployerProfileDetailView.as_view(),name="EProfileDetail"),
+         path("profile/change/<int:id>",views.EmployerProfileEditView.as_view(),name="EProfileEdit"),
+         path("jobpost/create",views.EmployerJobPostView.as_view(),name="EJobPostCreate"),
+         path("jobpost/list",views.EmployerJobDetailView.as_view(),name="EJobPostList")
 ]

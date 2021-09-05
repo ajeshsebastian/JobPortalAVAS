@@ -14,11 +14,11 @@ import os
 class SeekerRegistrationView(CreateView):
     model=MyUser
     form_class=forms.SeekerRegistrationForm
-    template_name="jobseeker_registration.html"
+    template_name="registration.html"
     success_url = reverse_lazy("signin")
 
 class SignIn(TemplateView):
-    template_name = "jobseeker_signin.html"
+    template_name = "signin.html"
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -37,7 +37,7 @@ class SignIn(TemplateView):
                 if request.user.role == "Employee":
                     return redirect("profilehome")
                 elif request.user.role == "Employer":
-                    return redirect('register')
+                    return render(request,"EmployerBaseHome.html")
                 else:
                     return redirect("register")
             else:
