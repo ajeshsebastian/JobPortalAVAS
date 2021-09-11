@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+{%extends 'mainbase.html'%}
+{%block body_block%}
+<div class="row mt-5">
+<div class="col-4"></div>
+<div class="col-4">
+    <form action="" method="post">
+    {%csrf_token%}
+    <p>Do you want to cancel yor Application ?</p>
+    <button type="submit" class="btn btn-danger">Cancel</button>
+</form>
+</div>
+<div class="col-4"></div>
+    </div>
+
+{%endblock%}

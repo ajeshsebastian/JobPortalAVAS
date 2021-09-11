@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{%extends 'mainbase.html'%}
+{%block body_block%}
+<div class="row mt-2 ml-1 mr-1 card-body align-items-start job-item border-bottom pb-3 mb-3 pt-3">
+            <div class="col-md-5">
+              <h2><a style="color:#0a5c98">{{job.job_position}} </a> </h2>
+                <br>
+                <span class="ml-0 mr-2 mb-2"><span><img src="/static/main/images/work.png"></span>{{job.company.user}}</span>
+                <span class="m-2"><span><img src="/static/main/images/location.png"></span>{{job.location}}</span>
+                <span class="m-2"><span><img src="/static/main/images/time.png"></span><span class="text-primary">Full
+                  Time</span></span>
+                <br>
+                <br>
+            </div>
+            <div class="col-md-2 text-left">
+            </div>
+            <div class="col-md-3 text-md-right">
+            </div>
+            <div class="col-md-2 text-md-right">
+                <a href="{%url 'apply' job.id %}" class="btn btn-primary">Apply</a>
+            </div>
+    </div>
+  <div class="row card-body">
+    <div class="col-lg-3"></div>
+<div class="col-lg-5">
+            <div class="bg-light p-3 border rounded mb-4">
+              <h4 class="text-primary  mt-3 h5 pl-3 mb-3 ">Job Summary</h4>
+              <ul class="list-unstyled pl-3 mb-0">
+                <li class="mb-2"><strong class="text-black">Job Description:</strong> {{job.job_discription}}</li>
+                <li class="mb-2"><strong class="text-black">Vacancy:</strong> {{job.vacancies}}</li>
+                <li class="mb-2"><strong class="text-black">Employment Type :</strong> {{job.employment_type}}</li>
+                <li class="mb-2"><strong class="text-black">Experience:</strong> {{job.min_experience}} to {{job.max_experience}} year(s)</li>
+                <li class="mb-2"><strong class="text-black">Job Location:</strong> {{job.location}}</li>
+                <li class="mb-2"><strong class="text-black">Salary:</strong> {{job.salary}}</li>
+                <li class="mb-2"><strong class="text-black">Education:</strong> {{job.education}}</li>
+                <li class="mb-2"><strong class="text-black">Candidate Profile:</strong> {{job.candidate_profile}}</li>
+              </ul>
+            </div>
+</div>
+    </div>
+
+{%endblock%}

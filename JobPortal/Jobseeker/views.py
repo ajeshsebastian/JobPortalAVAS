@@ -1,11 +1,11 @@
 from django.shortcuts import render,redirect
 from Employer import forms
-from django.views.generic import TemplateView,ListView,UpdateView,CreateView
-from Employer.models import MyUser
+from django.views.generic import TemplateView,ListView,UpdateView,CreateView,DetailView,DeleteView
+from Employer.models import MyUser,JobPost
 from django.contrib.auth import authenticate,login,logout
 from django.urls import reverse_lazy
 from Jobseeker import forms
-from Jobseeker.models import JobseekerProfile
+from Jobseeker.models import JobseekerProfile,JobApplyModel
 from django.http import HttpResponse,Http404,HttpResponseRedirect
 import os
 
@@ -92,6 +92,39 @@ class UpdateProfile(UpdateView):
     template_name = "editprofile.html"
     form_class = forms.JobseekerProfileCreationForm
     success_url =reverse_lazy ("jobseekerdetails")
+
+class JobListView(ListView):
+    model= JobPost
+    context_object_name = "jobs"
+    template_name = "JobList.html"
+    def get_queryset(self):
+        return self.model.objects.all()
+
+class JobDetails(DetailView):
+    model=JobPost
+    template_name = "JobDetailsSingle.html"
+    context_object_name = "job"
+
+def jobapply(request,id):
+    jobpost=JobPost.objects.get(id=id)
+    jprofile=JobseekerProfile.objects.get(user=request.user)
+    apply=JobApplyModel(name=jprofile,user=request.user,applied_job=jobpost,euser=jobpost.myuser)
+    apply.save()
+    return redirect("alljobs")
+
+class AppliedJobsListView(ListView):
+    model= JobApplyModel
+    context_object_name = "jobs"
+    template_name = "AppliedJobs.html"
+    def get_queryset(self):
+        return self.model.objects.all()
+
+
+class CancelAppliedJob(DeleteView):
+    model=JobApplyModel
+    template_name = "CancelAppliedJob.html"
+    context_object_name = "job"
+    success_url = reverse_lazy("appliedjobs")
 
 def signout(request):
     logout(request)

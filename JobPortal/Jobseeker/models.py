@@ -26,3 +26,4 @@ class JobApplyModel(models.Model):
              ("Interview_scheduled","Interview_scheduled"))
     status=models.CharField(choices=options,max_length=75,default="applied")
     applied_job=models.ForeignKey(JobPost,on_delete=models.CASCADE)
+    euser = models.CharField(max_length=120, null=True)

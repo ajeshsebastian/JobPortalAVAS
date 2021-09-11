@@ -3,15 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="80e41af4-c939-484f-aef7-761c07d26898" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JobPortal/Employer/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/JobPortal/Employer/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JobPortal/Employer/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/JobPortal/Employer/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JobPortal/Employer/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/JobPortal/Employer/templates/Employerhome.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JobPortal/Employer/templates/login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JobPortal/Employer/templates/registration.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JobPortal/Employer/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/JobPortal/Employer/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JobPortal/Employer/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/JobPortal/Employer/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JobPortal/Jobseeker/templates/jobseeker_registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/JobPortal/Jobseeker/templates/registration.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JobPortal/Jobseeker/templates/jobseeker_signin.html" beforeDir="false" afterPath="$PROJECT_DIR$/JobPortal/Jobseeker/templates/signin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JobPortal/Jobseeker/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/JobPortal/Jobseeker/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JobPortal/Jobseeker/templates/mainbase.html" beforeDir="false" afterPath="$PROJECT_DIR$/JobPortal/Jobseeker/templates/mainbase.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JobPortal/Jobseeker/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/JobPortal/Jobseeker/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JobPortal/Jobseeker/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/JobPortal/Jobseeker/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JobPortal/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/JobPortal/db.sqlite3" afterDir="false" />
@@ -42,14 +36,14 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../DoctorAppointmentSystem" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/JobPortal/Jobseeker/templates" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ajesh\PycharmProjects\mydjangoprojects\JobPortalAVAS\JobPortal\Jobseeker\templates" />
       <recent name="C:\Users\Aravind\PycharmProjects\mydjangoprojects\JobPortalAVAS\JobPortal\Employer\static\css" />
       <recent name="C:\Users\Aravind\PycharmProjects\mydjangoprojects\JobPortalAVAS\JobPortal\Employer" />
       <recent name="C:\Users\Aravind\PycharmProjects\mydjangoprojects\JobPortalAVAS\JobPortal\Employer\templates" />
-      <recent name="C:\Users\ajesh\PycharmProjects\mydjangoprojects\JobPortalAVAS\JobPortal\Jobseeker\templates" />
       <recent name="C:\Users\ajesh\PycharmProjects\mydjangoprojects\JobPortalAVAS\JobPortal\Jobseeker\static" />
     </key>
   </component>

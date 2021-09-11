@@ -80,6 +80,8 @@ class EmployerProfile(models.Model):
       industry_type=models.CharField(max_length=30)
       specialities=models.CharField(max_length=300)
       user=models.CharField(max_length=25)
+      company_name=models.CharField(max_length=120,null=True)
+
 
 class JobPost(models.Model):
       company=models.ForeignKey(EmployerProfile,on_delete=models.CASCADE)

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{%extends 'mainbase.html'%}
+{%block body_block%}
+
+
+<div class="container">
+    <h3 class="mt-3" align="center" style="color:blue">Applied Jobs Status</h3>
+    <table class="table table-success table-striped mt-2">
+        <tr>
+            <th>Job Position</th>
+            <th>Company Name</th>
+            <th>Location</th>
+            <th>Salary</th>
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
+        {%if jobs%}
+        {%for job in jobs%}
+        <tr>
+            <td>{{job.applied_job.job_position}}</td>
+            <td>{{job.applied_job.company.company_name}}</td>
+            <td>{{job.applied_job.location}}</td>
+            <td>{{job.applied_job.salary}}</td>
+            <td>{{job.status}}</td>
+            <td>
+                <a href="{%url 'canceljob' job.id%}" class="btn btn-danger ms-2">Cancel</a>
+
+            </td>
+        </tr>
+        {%endfor%}
+        {%endif%}
+    </table>
+</div>
+
+{%endblock%}
