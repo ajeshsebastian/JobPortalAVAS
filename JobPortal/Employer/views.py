@@ -2,6 +2,7 @@ from django.shortcuts import render,redirect
 from Employer import forms
 from django.views.generic import TemplateView,ListView,DetailView,UpdateView,CreateView,DeleteView
 from Employer.models import MyUser,EmployerProfile,JobPost
+from Jobseeker.models import JobApplyModel
 from django.urls import reverse_lazy
 # Create your views here.
 
@@ -77,3 +78,16 @@ class EmployerJobDetailView(ListView):
     template_name = "EmployerJobDetails.html"
     def get_queryset(self):
         return self.model.objects.filter(myuser=self.request.user)
+
+class EmployerTotalJobApply(TemplateView):
+    template_name = "Employerhome.html"
+    model=JobApplyModel
+    context={}
+    def get(self, request, *args, **kwargs):
+        apply=self.model.objects.filter(status="applied",euser=request.user).count()
+        self.context["apply"]=apply
+        self.context["jobapplies"]=self.model.objects.filter(status="applied",euser=request.user)
+        jobposts=JobPost.objects.filter(status="created",myuser=request.user)
+        self.context["jobposts"]=jobposts
+        self.context["post"] = jobposts.count()
+        return render(request, self.template_name, self.context)

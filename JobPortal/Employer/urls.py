@@ -2,7 +2,7 @@ from django.urls import path
 from django.shortcuts import render
 from Employer import views
 urlpatterns=[
-         path("home",views.EmployerHomeView.as_view(),name="Ehome"),
+         path("home",views.EmployerTotalJobApply.as_view(),name="Ehome"),
          path("profile/create",views.EmployerCreateProfileView.as_view(),name="EProfileCreate"),
          path("profile/view",views.EmployerProfileDetailView.as_view(),name="EProfileDetail"),
          path("profile/change/<int:id>",views.EmployerProfileEditView.as_view(),name="EProfileEdit"),

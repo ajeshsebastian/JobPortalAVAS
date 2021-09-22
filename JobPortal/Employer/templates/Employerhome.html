@@ -1,13 +1,57 @@
 <!DOCTYPE html>
 {%extends 'EmployerBaseHome.html'%}
 {%block body_block%}
-    <div class="container">
-        <div class="row">
-            <div class="col-4"></div>
-            <div class="col-4">
-                <h1>Welcome home Page</h1>
-            </div>
-            <div class="col-4"></div>
-        </div>
+<div class="row">
+    <div class="col-6">
+        <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingOne">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+        Total Job Post#{{post}}
+      </button>
+    </h2>
+    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">
+          <table class="table">
+          {%for jp in jobposts%}
+                <tr>
+                    <td>{{jp.job_position}}</td>
+                    <td>{{jp.min_experience}}</td>
+                    <td>{{jp.max_experience}}</td>
+                    <td>{{jp.vacancies}}
+              </tr>
+          {%endfor%}
+          </table>
+      </div>
     </div>
+  </div>
+    </div>
+
+    <div class="col-6">
+        <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingTwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+        Total Job Application #{{apply}}
+      </button>
+    </h2>
+    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">
+          <table class="table">
+          {%for ja in jobapplies%}
+                <tr>
+                    <td>{{ja.applied_job.job_position}}</td>
+                    <td>{{ja.applied_job.company.company_name}}</td>
+                    <td>{{ja.applied_job.location}}</td>
+                    <td>{{ja.applied_job.salary}}</td>
+                    <td>{{ja.status}}</td>
+              </tr>
+          {%endfor%}
+          </table>
+      </div>
+    </div>
+  </div>
+    </div>
+
+
+</div>
+
 {%endblock%}

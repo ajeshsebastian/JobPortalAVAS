@@ -27,7 +27,7 @@ class EmployerJobPostCreateForm(ModelForm):
     class Meta:
         model=JobPost
         fields='__all__'
-        exclude=["company","myuser"]
+        exclude=["company","myuser","options"]
         widgets={
             "job_discription":forms.Textarea(attrs={'class': "form-control"})
         }

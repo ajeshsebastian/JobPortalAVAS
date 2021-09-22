@@ -84,6 +84,8 @@ class EmployerProfile(models.Model):
 
 
 class JobPost(models.Model):
+      options = (("created", "created"), ("cancelled", "cancelled"))
+      status = models.CharField(choices=options, max_length=75, default="created")
       company=models.ForeignKey(EmployerProfile,on_delete=models.CASCADE)
       job_position=models.CharField(max_length=40)
       min_experience=models.CharField(max_length=10)
