@@ -7,6 +7,7 @@ from django.urls import reverse_lazy
 from Jobseeker import forms
 from Jobseeker.models import JobseekerProfile,JobApplyModel
 from django.http import HttpResponse,Http404,HttpResponseRedirect
+from django.contrib import messages
 import os
 
 # Create your views here.
@@ -37,7 +38,7 @@ class SignIn(TemplateView):
                 if request.user.role == "Employee":
                     return redirect("profilehome")
                 elif request.user.role == "Employer":
-                    return render(request,"EmployerBaseHome.html")
+                    return redirect("Ehome")
                 else:
                     return redirect("register")
             else:
@@ -106,11 +107,17 @@ class JobDetails(DetailView):
     context_object_name = "job"
 
 def jobapply(request,id):
-    jobpost=JobPost.objects.get(id=id)
-    jprofile=JobseekerProfile.objects.get(user=request.user)
-    apply=JobApplyModel(name=jprofile,user=request.user,applied_job=jobpost,euser=jobpost.myuser)
-    apply.save()
-    return redirect("alljobs")
+    try:
+        jobpost = JobPost.objects.get(id=id)
+        jprofile = JobseekerProfile.objects.get(user=request.user)
+        apply = JobApplyModel(name=jprofile, user=request.user, applied_job=jobpost, euser=jobpost.myuser)
+        apply.save()
+        messages.success(request, "applied successfully")
+        return redirect("appliedjobs")
+    except:
+        messages.error(request, "already applied")
+
+        return redirect("appliedjobs")
 
 class AppliedJobsListView(ListView):
     model= JobApplyModel

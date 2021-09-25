@@ -17,7 +17,7 @@
             <div class="col-md-3 text-md-right">
             </div>
             <div class="col-md-2 text-md-right">
-                <a href="{%url 'apply' job.id %}" class="btn btn-primary">Apply</a>
+                <a href="{%url 'apply' job.id %}" onclick="return confirm('Are you sure to apply for this job? Press OK to Continue') " class="btn btn-primary">Apply</a>
             </div>
     </div>
   <div class="row card-body">

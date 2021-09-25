@@ -25,5 +25,5 @@ class JobApplyModel(models.Model):
     options=(("applied","applied"),("rejected","rejected"),("Under_review","Under_review"),
              ("Interview_scheduled","Interview_scheduled"))
     status=models.CharField(choices=options,max_length=75,default="applied")
-    applied_job=models.ForeignKey(JobPost,on_delete=models.CASCADE)
+    applied_job=models.OneToOneField(JobPost,on_delete=models.CASCADE)
     euser = models.CharField(max_length=120, null=True)

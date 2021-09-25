@@ -117,6 +117,7 @@
                             <i class="icon-speedometer menu-icon"></i><span class="nav-text">Dashboard</span>
                         </a>
                         <ul aria-expanded="false">
+                            <li><a href="{%url 'profilehome'%}">Home</a></li>
                             {%if home.is_login%}
                             <li><a href="{%url 'jobseekerdetails'%}">Profile</a></li>
                             {%endif%}

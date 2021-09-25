@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row">
         <div class="col-1"></div>
-        <div class="col-10">
+        <div class="col-11">
             <div class="row">
                 <div class="col-4"></div>
                 <div class="col-4">
@@ -13,7 +13,7 @@
                 <div class="col-4"></div>
             </div>
 
-            <table class="table">
+            <table class="table table-striped">
     <tr>
         <th>Job Position</th>
         <th>Min Experience</th>
@@ -28,13 +28,14 @@
         <td>{{job.max_experience}}</td>
         <td>{{job.vacancies}}</td>
         <td>
-            <a href="" class="btn btn-primary">Detail</a><a href="" class="btn btn-warning">Update</a><a href="" class="btn btn-danger">Delete</a>
+            <a href="" class="btn btn-primary">Detail</a>&nbsp&nbsp<a href="" class="btn btn-warning">Update</a>&nbsp&nbsp<a href="" class="btn btn-danger">Delete</a>
         </td>
-         {%endfor%}
+
     </tr>
+                {%endfor%}
 </table>
         </div>
-        <div class="col-1"></div>
+<!--        <div class="col-1"></div>-->
     </div>
 </div>
 {%endblock%}

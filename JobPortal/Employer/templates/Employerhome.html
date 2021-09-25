@@ -37,6 +37,15 @@
       <div class="accordion-body">
           <table class="table">
           {%for ja in jobapplies%}
+              <tr>
+
+                  <th>Position</th>
+                  <th>Company Name</th>
+                  <th>Location</th>
+                  <th>Salary</th>
+                  <th>Status</th>
+
+              </tr>
                 <tr>
                     <td>{{ja.applied_job.job_position}}</td>
                     <td>{{ja.applied_job.company.company_name}}</td>

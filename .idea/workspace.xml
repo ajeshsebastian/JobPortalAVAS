@@ -2,14 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="80e41af4-c939-484f-aef7-761c07d26898" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/JobPortal/Employer/migrations/0006_jobpost_status.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JobPortal/Employer/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/JobPortal/Employer/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JobPortal/Employer/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/JobPortal/Employer/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JobPortal/Employer/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/JobPortal/Employer/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JobPortal/Employer/templates/EmployerJobDetails.html" beforeDir="false" afterPath="$PROJECT_DIR$/JobPortal/Employer/templates/EmployerJobDetails.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JobPortal/Employer/templates/EmployerProfileDetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/JobPortal/Employer/templates/EmployerProfileDetail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JobPortal/Employer/templates/EmployerProfileEdit.html" beforeDir="false" afterPath="$PROJECT_DIR$/JobPortal/Employer/templates/EmployerProfileEdit.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JobPortal/Employer/templates/Employerhome.html" beforeDir="false" afterPath="$PROJECT_DIR$/JobPortal/Employer/templates/Employerhome.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JobPortal/Employer/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/JobPortal/Employer/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JobPortal/Employer/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/JobPortal/Employer/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JobPortal/Jobseeker/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/JobPortal/Jobseeker/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JobPortal/Jobseeker/templates/JobDetailsSingle.html" beforeDir="false" afterPath="$PROJECT_DIR$/JobPortal/Jobseeker/templates/JobDetailsSingle.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JobPortal/Jobseeker/templates/mainbase.html" beforeDir="false" afterPath="$PROJECT_DIR$/JobPortal/Jobseeker/templates/mainbase.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JobPortal/Jobseeker/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/JobPortal/Jobseeker/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JobPortal/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/JobPortal/db.sqlite3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
